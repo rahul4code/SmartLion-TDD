@@ -11,3 +11,11 @@ test("returns the number when only one number is provided", () => {
 test("returns the sum of two numbers", () => {
   expect(StringCalculator.add("1,2")).toBe(3);
 });
+
+test("returns the sum of multiple numbers", () => {
+  expect(StringCalculator.add("1,2,3,4")).toBe(10);
+});
+
+test("handles new lines between numbers", () => {
+  expect(StringCalculator.add("1\n2,3")).toBe(6);
+});
